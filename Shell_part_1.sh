@@ -12,6 +12,7 @@ MY_SHELL="bash"
 if [ "$MY_SHELL" = "bash" ]
   echo True
 fi
+# we can access command using () and ` `
 
 #MY_SHELL="bash script"
 #echo $MY_SHELL     # -> bash script      (two words)
@@ -23,6 +24,26 @@ for COLOR in $COLORS
 do
  echo $COLOR
 done
+
+IMAGES= $ (ls *jpg)
+DATE= $(date +%F)
+for IMAGE in $IMAGES
+do 
+  mv $IMAGE $DATE-$IMAGE
+
+#Positional argument $0 to $9 $0 stores scriptname followed by passed argument
+echo " Executing script : $0"
+echo "User name: $1" # to access multiple user use $@
+passwd -l "$1" or unlock L "$1"
+tar czf /archives/${1}.tar.gz /home/${1} #{} formatting specifies variable name create archive from /home/user to specified archive
+
+# User input
+read -p "Enter name:" USER # -p to display message wait for user to enter input
+echo "$USER"
+
+
+
+
 
 
 
